@@ -1,0 +1,48 @@
+{
+    "request":
+    [
+        { "type": "SOUL", "count": 3 },
+        { "type": "MEAT", "count": 8 },
+        { "type": "PIG", "count": 1 }
+    ],
+    "islands":
+    [
+        null,
+        null,
+        {
+            "type": "BASE_BLOCK_ISLAND",
+            "block_count": 5,
+            "has_border": false,
+            "has_portal": false,
+            "walls": { "LEFT": null, "RIGHT": null, "UP": null, "DOWN": null },
+            "entities": { "SHEEP": 5 }
+        },
+        null,
+        {
+            "type": "DELIVERY_ISLAND",
+            "walls": { "LEFT": null, "RIGHT": null, "UP": null, "DOWN": null },
+            "entities": { }
+        },
+        {
+            "type": "BASE_BLOCK_ISLAND",
+            "block_count": 7,
+            "has_border": false,
+            "has_portal": false,
+            "walls": { "LEFT": null, "RIGHT": null, "UP": null, "DOWN": null },
+            "entities": { "WOLF_HUNGRY": 3 }
+        },
+        {
+            "type": "BASE_BLOCK_ISLAND",
+            "block_count": 6,
+            "has_border": false,
+            "has_portal": false,
+            "walls": { "LEFT": null, "RIGHT": null, "UP": null, "DOWN": null },
+            "entities": { "PIG": 4 }
+        },
+        null,
+        null,
+        null,
+        null,
+        null
+    ]
+}

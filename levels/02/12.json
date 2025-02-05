@@ -1,0 +1,67 @@
+{
+    "request":
+    [
+        { "type": "SOUL", "count": 2 },
+        { "type": "SHEEP", "count": 4 },
+        { "type": "WOLF", "count": 2 }
+    ],
+    "islands":
+    [
+        null,
+        {
+            "type": "BASE_BLOCK_ISLAND",
+            "block_count": 5,
+            "has_border": true,
+            "has_portal": false,
+            "walls": { "LEFT": null, "RIGHT": null, "UP": null, "DOWN": null },
+            "entities": { "WOLF_HUNGRY": 3 }
+        },
+        null,
+        null,
+        {
+            "type": "DELIVERY_ISLAND",
+            "walls": { "LEFT": null, "RIGHT": null, "UP": null, "DOWN": null },
+            "entities": { }
+        },
+        {
+            "type": "BASE_BLOCK_ISLAND",
+            "block_count": 3,
+            "has_border": true,
+            "has_portal": false,
+            "walls": { "LEFT": null, "RIGHT": null, "UP": null, "DOWN": null },
+            "entities": { "SHEEP": 2 }
+        },
+        {
+            "type": "BOUNCE_BLOCK_ISLAND",
+            "walls": { "LEFT": null, "RIGHT": null, "UP": null, "DOWN": null },
+            "arrows": [ "LEFT" ],
+            "entities": { }
+        },
+        {
+            "type": "BASE_BLOCK_ISLAND",
+            "block_count": 3,
+            "has_border": false,
+            "has_portal": false,
+            "walls": { "LEFT": null, "RIGHT": null, "UP": null, "DOWN": null },
+            "entities": { "WOLF_HUNGRY": 1 }
+        },
+        null,
+        null,
+        {
+            "type": "BASE_BLOCK_ISLAND",
+            "block_count": 3,
+            "has_border": false,
+            "has_portal": false,
+            "walls": { "LEFT": null, "RIGHT": null, "UP": null, "DOWN": null },
+            "entities": { "WOLF_HUNGRY": 2 }
+        },
+        {
+            "type": "BASE_BLOCK_ISLAND",
+            "block_count": 3,
+            "has_border": false,
+            "has_portal": false,
+            "walls": { "LEFT": null, "RIGHT": null, "UP": null, "DOWN": null },
+            "entities": { "SHEEP": 3 }
+        }
+    ]
+}

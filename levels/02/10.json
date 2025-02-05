@@ -1,0 +1,69 @@
+{
+    "request":
+    [
+        { "type": "SOUL", "count": 4 },
+        { "type": "SHEEP", "count": 1 },
+        { "type": "SOUL", "count": 3 }
+    ],
+    "islands":
+    [
+        null,
+        {
+            "type": "BASE_BLOCK_ISLAND",
+            "block_count": 3,
+            "has_border": true,
+            "has_portal": false,
+            "walls": { "LEFT": null, "RIGHT": null, "UP": null, "DOWN": null },
+            "entities": { "WOLF_HUNGRY": 2 }
+        },
+        {
+            "type": "BASE_BLOCK_ISLAND",
+            "block_count": 2,
+            "has_border": true,
+            "has_portal": false,
+            "walls": { "LEFT": null, "RIGHT": null, "UP": null, "DOWN": null },
+            "entities": { "SHEEP": 2 }
+        },
+        null,
+        {
+            "type": "DELIVERY_ISLAND",
+            "walls": { "LEFT": null, "RIGHT": null, "UP": null, "DOWN": null },
+            "entities": { }
+        },
+        {
+            "type": "BASE_BLOCK_ISLAND",
+            "block_count": 4,
+            "has_border": false,
+            "has_portal": false,
+            "walls": { "LEFT": null, "RIGHT": null, "UP": null, "DOWN": null },
+            "entities": { "SHEEP": 2 }
+        },
+        null,
+        {
+            "type": "BASE_BLOCK_ISLAND",
+            "block_count": 2,
+            "has_border": true,
+            "has_portal": false,
+            "walls": { "LEFT": null, "RIGHT": null, "UP": null, "DOWN": null },
+            "entities": { "WOLF_HUNGRY": 2 }
+        },
+        null,
+        null,
+        {
+            "type": "BASE_BLOCK_ISLAND",
+            "block_count": 4,
+            "has_border": false,
+            "has_portal": false,
+            "walls": { "LEFT": null, "RIGHT": null, "UP": null, "DOWN": null },
+            "entities": { "SHEEP": 3 }
+        },
+        {
+            "type": "BASE_BLOCK_ISLAND",
+            "block_count": 3,
+            "has_border": true,
+            "has_portal": false,
+            "walls": { "LEFT": null, "RIGHT": null, "UP": null, "DOWN": null },
+            "entities": { "SHEEP": 1 }
+        }
+    ]
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/level.js"></script>
+    <script src="scripts/island.js"></script>
+    <script src="scripts/laser_wall.js"></script>
+    <script src="scripts/divide_by_sheep.js"></script>
+    <script src="scripts/game_state.js"></script>
+    <script src="scripts/solution.js"></script>
+    <script>
+        document.oncontextmenu = function () {
+            return false;
+        }
+
+        window.addEventListener('keypress', (event) => {
+            if (event.code == "Space") event.preventDefault();
+        });
+    </script>
+
+<body style="max-width: 1400px;">
+    <h1 style="font-size:60px">Divide by Sheep puzzle solver</h1>
+    <h1 style="font-size:35px">About the project</h1>
+
+    <p>
+        In this project I’ve developed a solver for the puzzle video game <i>Divide by Sheep </i> (<a href="https://store.steampowered.com/app/252130/Divide_By_Sheep/">Steam page</a>). I love achievement hunting, so my motivation for creating this program was to let the computer do the hard lifting, allowing me to simply enjoy collecting achievements for completing levels. Solving the puzzles on my own definitely took less time, but writing this program proved to be a greater source of fun and challenge. This project features a general-purpose solver, designed without level-specific optimization, so yes, it can even solve custom user-created levels. It does not include a level editor, so creating custom levels requires diving into the source code, sorry. But I added an easy drag-and-drop feature for loading JSON files containing level descriptions. To import your puzzle, simply drag your file onto the canvas and release the mouse button.
+    </p>
+
+    <p>
+        Some interactions between entities and other game mechanics in the original game are not clearly defined, so I filled these gaps with my own ideas. There was also a peculiar behavior in the game that allowed players to serve two ships in a single turn. While it’s unclear if this was an intended solution, I didn’t find it to be an elegant move, so I chose to remove it. The solver does not always provide solutions with the smallest number of steps. Due to the extensive search space, I implemented some optimizations, which resulted in this side effect. The solver can solve almost every level instantly (at least from a human perspective), but a few levels take longer. To illustrate this, I prepared a graph displaying all levels that require more than 0.3 seconds to solve. The worst is level 26 in the Dark World, taking an average of 3.31 seconds to solve on my computer.
+    </p>
+
+    <p>
+        To use the solver, hover the mouse over the button labeled "Word Selector". Choose a word, then select a map from the pool of 30 levels. After a brief calculation, the solution is displayed. A black arrow between two islands indicates the move that needs to be made. If an arrow is not present (this can occur only if you imported a custom level), it means no solution exists. By pressing the space button, you can step through the solution one move at a time.
+    </p>
+
+    <div style="width: 1000px; height: 500px; position: relative; overflow: hidden;">
+        <canvas id="chart" width="100%" height="100%"></canvas>
+    </div>
+
+    <div style="margin-bottom: 60px">
+        <div class="dropdown">
+            <button class="dropdown-button">World Selector</button>
+            <div id="dropdown-content">
+                <button id="world-0-button">Green World</button>
+                <button id="world-1-button">Ice World</button>
+                <button id="world-2-button">Dark World</button>
+                <button id="world-3-button">Spring World</button>
+                <button id="world-4-button">World of Ruins</button>
+            </div>
+        </div>
+    </div>
+    <div style="margin-bottom: 40px" id="level-select-button-container"></div>
+    <div>
+        <h1 id="world-level-description">Green World - Level 01<h1>
+    </div>
+    <div id="canvas-container"></div>
+</body>
+
+</html>
